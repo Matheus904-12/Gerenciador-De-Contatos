@@ -1,0 +1,32 @@
+
+body {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+}
+
+form input {
+    margin: 0 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.botoes button {
+    margin: 0 15px 20px;
+}
+
