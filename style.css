@@ -1,31 +1,100 @@
-
 body {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
 }
 
 form {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
 }
 
-input, button {
+input, button, textarea {
     padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
 }
 
-form input {
-    margin: 0 20px;
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+form input, form textarea {
+    width: 200px;
 }
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 li {
     margin-bottom: 10px;
+    animation: fadeIn 1s ease;
 }
 
 .botoes button {
     margin: 0 15px 20px;
+    animation: fadeIn 1s ease;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    max-width: 100%; /* Define a largura máxima para evitar que o vídeo fique muito grande */
+    max-height: 100%; /* Define a altura máxima para evitar que o vídeo fique muito grande */
+}
+
+

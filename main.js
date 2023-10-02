@@ -36,6 +36,52 @@ class GerenciadorContatos {
 }
 
 // Cria um objeto de classe GerenciadorContatos
-const GerenciadorContatos = new GerenciadorContatos();
+const gerenciadorContatos = new GerenciadorContatos();
 
-// Cria 
+// Cria os elementos necessarios
+const contatoForm = document.getElementById('contato-form');
+const nomeF = document.getElementById('nome');
+const emailF = document.getElementById('email');
+const telefoneF = document.getElementById('telefone');
+const mostrarContatos = document.getElementById('mostrar-contatos');
+const ocultarContatos = document.getElementById('ocultar-contatos');
+const listaContatos = document.getElementById('contato-lista');
+
+contatoForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const nome = nomeF.value;
+    const email = emailF.value;
+    const telefone = telefoneF.value;
+
+    // Criando objeto da classe Contato
+    const contato = new Contatos(nome, email, telefone);
+
+    gerenciadorContatos.adicionarContato(contato);
+
+    nomeF.value = '';
+    emailF.value = '';
+    telefoneF.value = '';
+})
+
+
+// Estamos adicionando um manipulador de eventos para o botão mostrar contatos, que exibe a lista de contatos
+mostrarContatos.addEventListener('click', () => {
+    gerenciadorContatos.exibirContatos();
+    listaContatos.style.display = 'block';
+})
+
+ocultarContatos.addEventListener('click', () =>{
+    listaContatos.style.display = 'none'
+})
+
+document.getElementById("enviar-mensagem").addEventListener("click", function() {
+    var mensagem = document.getElementById("mensagem").value;
+    if (mensagem.trim() !== "") {
+        var lista = document.getElementById("contato-lista");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(mensagem));
+        lista.appendChild(li);
+        document.getElementById("mensagem").value = "";
+    }
+});
