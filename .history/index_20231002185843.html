@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Gerenciador de Contatos</h1>
+
+    <form id="contato-form">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="telefone" placeholder="Telefone" required>
+        <textarea id="mensagem" placeholder="Mensagem" rows="4" cols="50"></textarea>
+
+        
+    </form>
+    <div class="botoes">
+        <button id="mostrar-contatos">Mostrar Contatos</button>
+        <button id="ocultar-contatos">Ocultar Contatos</button>
+        <button type="button" id="enviar-mensagem">Enviar Mensagem</button>
+        <button type="submit">Adicionar Contato</button>
+    </div>
+    <ul id="contato-lista"></ul>
+    <video id="background-video" autoplay muted loop>
+        <source src="form_-_5790 (540p).mp4" type="video/mp4">
+        <!-- Adicione outros formatos de vídeo se necessário -->
+    </video>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
